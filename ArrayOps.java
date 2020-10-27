@@ -19,10 +19,23 @@ public class ArrayOps{
     int[] newRows = new int[matrix.length];
     for ( int i = 0; i < matrix.length; i++){
       int sum = 0;
-      for ( int j = 0; j < matrix[i].length; i++){
+      for ( int j = 0; j < matrix[i].length; j++){
         sum = sum + matrix[i][j];
       }
       newRows[i] = sum;
+    }
+    return newRows;
+  }
+  public static int[] largestInRows(int[][] matrix){
+    int[] newRows = new int[matrix.length];
+    for ( int i = 0; i < matrix.length; i++){
+      int largestInt = 0;
+      for ( int j = 0; j < matrix[i].length; j++){
+        if (matrix[i][j] > largestInt){
+          largestInt = matrix[i][j];
+      }
+      }
+      newRows[i] = largestInt;
     }
     return newRows;
   }
