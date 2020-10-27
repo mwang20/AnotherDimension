@@ -61,4 +61,19 @@ public class ArrayOps{
     }
     return newCols;
   }
+  public static boolean isRowMagic(int[][] matrix){
+    int notMagic = 0;
+    int newMagic = 0;
+    int[] magicTest = sumRows(matrix);
+    for (int i = 0; i < magicTest.length; i++){
+      if ( magicTest[i] == newMagic || i == 0 ){
+        newMagic = magicTest[i];
+      }
+      else notMagic = 1;
+    }
+    if ( notMagic == 1){
+      return false;
+    }
+    return true;
+  }
 }
