@@ -10,5 +10,7 @@ public class Tester{
     System.out.println(ArrayOps.largest(B));
     System.out.println();
     System.out.println(Arrays.toString(ArrayOps.sumRows(C)));
+    System.out.println();
+    System.out.println(Arrays.toString(ArrayOps.largestInRows(C)));
   }
 }
